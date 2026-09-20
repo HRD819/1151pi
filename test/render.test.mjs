@@ -48,6 +48,9 @@ test("期末報告範例位於期末報告卡片內", () => {
   const reportEnd = pages.assignments.indexOf('id="final-oral-presentation"');
   const example = pages.assignments.indexOf("期末報告範例－金融科技產業趨勢分析");
   assert.ok(reportStart < example && example < reportEnd);
+  assert.match(pages.assignments, /href="https:\/\/www\.dropbox\.com\/scl\/fi\/9igrce0prm8nnmbhalsra\/2018\.pdf\?rlkey=5ovq3shhbq4i60nsyxpjujezu&amp;st=lai6bhei&amp;dl=1"/);
+  assert.match(pages.assignments, />下載期末報告範例－金融科技產業趨勢分析 PDF<\/a>/);
+  assert.doesNotMatch(pages.assignments, /2018\.pdf[^\"]*dl=0/);
 });
 
 test("課程資訊只顯示已提供內容與具體資源連結", () => {
