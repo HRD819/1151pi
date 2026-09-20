@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "midterm-report",
+      "title": "期中報告｜分類或資料庫介紹",
+      "mode": "分組期中報告",
+      "status": "open",
+      "submission_formats": [],
+      "note": "作業說明與檔案格式待提供。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期中報告檔案"
+    },
+    {
+      "id": "final-proposal-ppt",
+      "title": "期末報告構想 PPT",
+      "status": "open",
+      "submission_formats": [
+        "PPT 或 PPTX（待教師確認）"
+      ],
+      "note": "作業說明待提供。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期末報告構想 PPT"
+    },
+    {
+      "id": "final-report",
+      "title": "期末報告",
+      "status": "open",
+      "submission_formats": [
+        "PowerPoint",
+        "Word"
+      ],
+      "resources": [
+        {
+          "title": "期末報告範例－金融科技產業趨勢分析",
+          "status": "planned",
+          "note": "Dropbox 個別檔案連結待提供。"
+        }
+      ],
+      "note": "作業說明待提供。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期末報告 PPT 與 Word"
+    },
+    {
+      "id": "final-oral-presentation",
+      "title": "期末口頭報告",
+      "status": "open",
+      "note": "報告規則待教師確認。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期末口頭報告資料"
+    }
+  ],
+  "excluded_pending_confirmation": [
+    {
+      "title": "期末報告小組互評線上測驗",
+      "reason": "不在目前指定的四個作業項目中；需確認外校生是否要參與及使用何種替代方式。"
+    }
+  ]
+}

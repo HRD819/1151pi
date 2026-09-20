@@ -1,0 +1,113 @@
+[
+  {
+    "id": "course-overview",
+    "title": "課程基本資訊及整體學習目標",
+    "status": "published",
+    "blocks": [
+      { "type": "heading", "text": "課程簡介" },
+      { "type": "paragraph", "text": "本課程為圖書資訊學的進階課程，涉及資訊學、工商資訊、資訊計量學，為 2 學分的學期課。" },
+      { "type": "paragraph", "text": "專利為科學文獻的其中一種，記載發明創作的內容，又被額外賦予專屬製造及銷售的權利，因此成為商業競爭中重要的武器之一，也是企業衡量其智慧資產的重要指標。" },
+      { "type": "paragraph", "text": "課程一開始會先介紹專利的基本概念，對於智慧財產建立基本的知識。而後會對專利制度、專利文獻、專利說明書的架構、專利分類進行詳細介紹。有關專利的基本概念，會採用紙本考試的方式考核。" },
+      { "type": "paragraph", "text": "接著介紹專利資料庫、專利檢索策略及技巧，認識相關工具後，再介紹專利計量的方式與指標；在學期末，學生應能完成一份專利分析報告。" },
+      { "type": "paragraph", "text": "修習本課程後，學生可對專利資訊的意義及特性有深入的瞭解，並學習如何分析公司或產業的專利能量。" }
+    ]
+  },
+  {
+    "id": "materials",
+    "title": "教材內容",
+    "status": "published",
+    "blocks": [
+      { "type": "callout", "text": "本課程不提供課程講義。" },
+      { "type": "heading", "text": "教科書" },
+      { "type": "paragraph", "text": "陳達仁與黃慕萱著（2018）。《專利資訊檢索、分析與策略》（第二版）。台北市：華泰。" },
+      { "type": "heading", "text": "參考資源" },
+      {
+        "type": "links",
+        "items": [
+          { "label": "開啟全球專利檢索系統 GPSS", "url": "https://gpss2.tipo.gov.tw/gpsskmc/gpssbkm" },
+          { "label": "開啟美國專利商標局網站", "url": "https://www.uspto.gov/" },
+          { "label": "開啟中華民國智慧財產局專利網頁", "url": "https://twpat.tipo.gov.tw/" },
+          { "label": "開啟中國知識產權局網站", "url": "https://www.sipo.gov.cn/" },
+          { "label": "開啟日本特許廳網站", "url": "https://www.jpo.go.jp/" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "teacher",
+    "title": "授課教師聯絡資訊及 Office Hour",
+    "status": "published",
+    "blocks": [
+      { "type": "links", "items": [
+        { "label": "查看授課教師聯絡資訊與 Office Hour（Canva）", "url": "https://www.canva.com/design/DAGMba0LMWE/AGLrWD2dLOCjfJSfdVSeTQ/view?embed" }
+      ] }
+    ]
+  },
+  {
+    "id": "grading",
+    "title": "作業及評分依據",
+    "status": "published",
+    "blocks": [
+      { "type": "heading", "text": "總成績配分" },
+      { "type": "list", "items": [
+        "期中考：30%",
+        "課堂報告（分類或資料庫介紹）PPT：10%",
+        "期末報告（口頭）PPT：10%",
+        "期末報告（書面）Word：40%",
+        "課堂參與：10%",
+        "彈性學習週作業：自由心證"
+      ] },
+      { "type": "callout", "text": "若缺課達本學期上課實際時數三分之一以上（包含請假與曠課之換算），學期總成績將評定為「因故不予評分」。" },
+      { "type": "callout", "text": "教室前三排禁止使用電子設備進行非課程活動；每次違規扣課堂參與分數一次，相當於總成績 1 分。" },
+      { "type": "heading", "text": "注意事項" },
+      { "type": "ordered-list", "items": [
+        "所有作業均需繳交紙本並上傳電子檔至 TronClass 平台（限 .docx、.doc、.odt）。",
+        "紙本與電子檔均需繳交；只交其中一份者，該項作業扣 30 分。抄襲者與被抄襲者均為 0 分。",
+        "作業第一頁務必標示：課程名稱、姓名、學號。",
+        "電子檔檔名為：學號_姓名_修改日期 6 碼。",
+        "作業超過 1 頁需標示頁碼。"
+      ] },
+      { "type": "heading", "text": "教室前三排禁止使用電子設備進行非課程活動說明" },
+      { "type": "quote", "text": "我要成為海賊王！" },
+      { "type": "paragraph", "text": "魯夫為了自己的目標，可以一路專注到底。修這門課請努力將注意力放在講解與課程內容上；若有查詢資料、課堂活動等必要需求，當然可以使用手機。" },
+      { "type": "paragraph", "text": "教室前三排的位置相當於演唱會或活動的 VIP 席。坐在前三排，代表你是願意專心聽講、積極參與課程的同學；非課堂必要時，請勿滑手機、平板或其他電子設備。" }
+    ]
+  },
+  {
+    "id": "leave",
+    "title": "請假說明",
+    "status": "published",
+    "blocks": [
+      { "type": "links", "items": [
+        { "label": "查看請假說明（Canva）", "url": "https://www.canva.com/design/DAGMbOOhHps/D12eQKr6D7faWKJIbU-XOg/view?embed" }
+      ] }
+    ]
+  },
+  {
+    "id": "screen-capture",
+    "title": "基本知識：螢幕剪取截圖工具",
+    "status": "published",
+    "blocks": [
+      { "type": "links", "items": [
+        { "label": "查看螢幕剪取截圖工具說明（Canva）", "url": "https://www.canva.com/design/DAGbTToyiu8/UFJEz409qYnEQr1VKIyreg/view?embed" }
+      ] }
+    ]
+  },
+  {
+    "id": "ai-policy",
+    "title": "關於 AI 的使用",
+    "status": "published",
+    "blocks": [
+      { "type": "ordered-list", "items": [
+        "AI 可以是很好的學習和解惑工具。善用 AI 幫助自己理解概念、釐清錯誤訊息、確認思路方向，是值得發展的能力。",
+        "課程的設計在於讓你在沒有工具撐腰的情況下，確認自己真的學會了。因此，原則上禁止的是利用 AI 工具繳出一份不屬於你的作業。"
+      ] },
+      { "type": "paragraph", "text": "能夠分清楚上述兩件事，並且在規則還不夠清晰的情況下自己做出判斷，是新時代大學生需要練習的事。" },
+      { "type": "paragraph", "text": "用 AI 繞過這個過程，作業交出去了，但能力沒有長出來。等到上到進階課程、進入碩博士訓練或走進職場，很可能那段沒走的路還在原地等你，只是代價更高了。" },
+      { "type": "paragraph", "text": "進大學是為了變強，還是為了換一個數字漂亮但自己知道實力不到的學歷、學分或證書回去？答案不同，選擇就不同。" },
+      { "type": "links", "items": [
+        { "label": "閱讀 AI 使用與學習能力的參考文章", "url": "https://iclab.ichentsai.tw/purdue-cs240/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExaXRuVllWanRaRTJ3VFJKSnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7aHmdNM24SbZMQeZAkiO6d4et7apf6ACaAjWln6QA_j0Ys235r11hr5r0C7g_aem_ZE2sM5hBoR03Szpe6BJdPQ" }
+      ] }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "name": "1151-patent-information-external-students",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "1151 專利資訊外校生課程專區的零相依靜態網站產生器",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/validate-content.mjs",
+    "test": "node --test",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check-site.mjs",
+    "serve": "node scripts/serve.mjs",
+    "ci": "npm run validate && npm run test && npm run build && npm run check"
+  }
+}

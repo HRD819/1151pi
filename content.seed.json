@@ -1,0 +1,79 @@
+{
+  "site": {
+    "semester": "1151",
+    "course_title": "專利資訊",
+    "site_title": "1151 專利資訊課程專區",
+    "purpose": "提供無法登入 TronClass 的外校生查看公告、取得補充教材與繳交作業。",
+    "official_source_notice": "校內學生仍以輔大 TronClass 公告與內容為準。",
+    "timezone": "Asia/Taipei",
+    "robots": "noindex, nofollow"
+  },
+  "announcements": [],
+  "supplements": [
+    {
+      "id": "patent-analysis-practice-example-07-2",
+      "title": "07_2 專利分析實務操作及範例",
+      "description": "專利分析實務操作與範例參考檔案。",
+      "file_type": "待確認",
+      "status": "planned"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "midterm-report",
+      "title": "期中報告｜分類或資料庫介紹",
+      "mode": "分組期中報告",
+      "status": "open",
+      "submission_formats": [],
+      "note": "作業說明與檔案格式待提供。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期中報告檔案"
+    },
+    {
+      "id": "final-proposal-ppt",
+      "title": "期末報告構想 PPT",
+      "status": "open",
+      "submission_formats": ["PPT 或 PPTX（待教師確認）"],
+      "note": "作業說明待提供。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期末報告構想 PPT"
+    },
+    {
+      "id": "final-report",
+      "title": "期末報告",
+      "status": "open",
+      "submission_formats": ["PowerPoint", "Word"],
+      "resources": [
+        {
+          "title": "期末報告範例－金融科技產業趨勢分析",
+          "status": "planned",
+          "note": "Dropbox 個別檔案連結待提供。"
+        }
+      ],
+      "note": "作業說明待提供。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期末報告 PPT 與 Word"
+    },
+    {
+      "id": "final-oral-presentation",
+      "title": "期末口頭報告",
+      "status": "open",
+      "note": "報告規則待教師確認。",
+      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
+      "upload_label": "上傳期末口頭報告資料"
+    }
+  ],
+  "excluded_pending_confirmation": [
+    {
+      "title": "期末報告小組互評線上測驗",
+      "reason": "不在目前指定的四個作業項目中；需確認外校生是否要參與及使用何種替代方式。"
+    }
+  ],
+  "course_info": [
+    {"id": "objectives", "title": "課程目標", "status": "planned"},
+    {"id": "grading", "title": "評分方式", "status": "planned"},
+    {"id": "teacher", "title": "教師資訊與 Office Hour", "status": "planned"},
+    {"id": "leave", "title": "請假規定", "status": "planned"},
+    {"id": "ai-policy", "title": "AI 使用規範", "status": "planned"}
+  ]
+}
