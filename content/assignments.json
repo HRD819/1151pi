@@ -40,14 +40,6 @@
       "note": "作業說明待提供。",
       "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
       "upload_label": "上傳期末報告 PPT 與 Word"
-    },
-    {
-      "id": "final-oral-presentation",
-      "title": "期末口頭報告",
-      "status": "open",
-      "note": "報告規則待教師確認。",
-      "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
-      "upload_label": "上傳期末口頭報告資料"
     }
   ],
   "excluded_pending_confirmation": [

@@ -27,13 +27,14 @@ test("四個導覽項目依規格固定排序", () => {
   }
 });
 
-test("教材不產生假連結，四項作業共用已確認的上傳連結", () => {
+test("教材不產生假連結，三項作業共用已確認的上傳連結", () => {
   assert.doesNotMatch(pages.supplements, /href="https:\/\/www\.dropbox\.com/);
   const fileRequestUrl = "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz";
-  assert.equal((pages.assignments.match(new RegExp(`href="${fileRequestUrl}"`, "g")) ?? []).length, 4);
-  for (const label of ["上傳期中報告檔案", "上傳期末報告構想 PPT", "上傳期末報告 PPT 與 Word", "上傳期末口頭報告資料"]) {
+  assert.equal((pages.assignments.match(new RegExp(`href="${fileRequestUrl}"`, "g")) ?? []).length, 3);
+  for (const label of ["上傳期中報告檔案", "上傳期末報告構想 PPT", "上傳期末報告 PPT 與 Word"]) {
     assert.match(pages.assignments, new RegExp(`>${label}</a>`));
   }
+  assert.doesNotMatch(pages.assignments, /期末口頭報告/);
   assert.match(pages.supplements, /狀態：資料待提供/);
   assert.doesNotMatch(pages.supplements, /教材取得方式|日期、格式及 Dropbox 個別檔案連結待提供/);
   assert.doesNotMatch(pages.assignments, /Dropbox File Request|依繳交流程排列四項作業；作業說明與繳交方式會在教師確認後更新/);
@@ -45,7 +46,7 @@ test("作業頁不顯示開始或截止時間", () => {
 
 test("期末報告範例位於期末報告卡片內", () => {
   const reportStart = pages.assignments.indexOf('id="final-report"');
-  const reportEnd = pages.assignments.indexOf('id="final-oral-presentation"');
+  const reportEnd = pages.assignments.indexOf("</article>", reportStart);
   const example = pages.assignments.indexOf("期末報告範例－金融科技產業趨勢分析");
   assert.ok(reportStart < example && example < reportEnd);
   assert.match(pages.assignments, /href="https:\/\/www\.dropbox\.com\/scl\/fi\/9igrce0prm8nnmbhalsra\/2018\.pdf\?rlkey=5ovq3shhbq4i60nsyxpjujezu&amp;st=lai6bhei&amp;dl=1"/);

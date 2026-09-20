@@ -191,7 +191,7 @@ function validateAssignments(data, errors) {
   requireArray(data.excluded_pending_confirmation, "assignments.excluded_pending_confirmation", errors);
   if (!Array.isArray(data.items)) return;
 
-  const expectedIds = ["midterm-report", "final-proposal-ppt", "final-report", "final-oral-presentation"];
+  const expectedIds = ["midterm-report", "final-proposal-ppt", "final-report"];
   const actualIds = [];
   const ids = new Set();
 
