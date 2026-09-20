@@ -110,3 +110,17 @@
 - 以 320、390、768、1440 px 檢查四頁，未發現水平溢位；keyboard-only 焦點順序與 skip link 均通過。
 - 已人工檢視 390 px 作業頁，四個作業卡片與上傳按鈕皆清楚可讀。
 - `git diff --check` 通過。
+
+## 2026-09-20｜GitHub Pages 首次發布
+
+### 已完成
+
+- 建立獨立公開 repository `HRD819/1151pi`，未與既有盲生網站共用 repository、內容或部署流程。
+- 將本機驗證通過的網站原始碼推送至 `main`，並以 GitHub Actions 的人工發布流程完成 GitHub Pages 部署。
+- 正式網站網址為 `https://hrd819.github.io/1151pi/`。
+
+### 驗證
+
+- GitHub Actions 的品質檢查與 Pages 部署工作均成功完成。
+- 正式首頁、補充教材、作業與繳交、課程資訊頁面均以 HTTP 200 回應。
+- 正式頁面仍保留 `noindex, nofollow`；知道網址的人仍可存取，這不等同密碼保護。
