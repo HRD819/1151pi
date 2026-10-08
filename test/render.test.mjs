@@ -44,6 +44,23 @@ test("作業頁不顯示開始或截止時間", () => {
   assert.doesNotMatch(pages.assignments, /開放時間|截止時間|開始時間|結束時間|Asia\/Taipei/);
 });
 
+test("期中報告卡片完整呈現分組與報告說明", () => {
+  const start = pages.assignments.indexOf('id="midterm-report"');
+  const end = pages.assignments.indexOf("</article>", start);
+  const card = pages.assignments.slice(start, end);
+  assert.match(card, /href="https:\/\/tinyurl\.com\/22vofa2n"/);
+  for (const text of [
+    "填寫期中報告分組與主題表單",
+    "分類組於 2026 年 10 月 22 日報告；資料庫組於 2026 年 11 月 19 日報告。",
+    "分類組",
+    "資料庫組",
+    "常見 QA",
+    "一組只需上傳一份報告即可。"
+  ]) {
+    assert.match(card, new RegExp(text));
+  }
+});
+
 test("期末報告範例位於期末報告卡片內", () => {
   const reportStart = pages.assignments.indexOf('id="final-report"');
   const reportEnd = pages.assignments.indexOf("</article>", reportStart);

@@ -375,6 +375,21 @@ h3 {
   border-radius: 0.55rem;
 }
 
+.assignment-guidance-section + .assignment-guidance-section {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.assignment-guidance h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-deep);
+}
+
+.assignment-guidance .course-list {
+  margin-top: 0;
+}
+
 .course-content > :first-child {
   margin-top: 0;
 }

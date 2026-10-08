@@ -35,6 +35,12 @@ test("作業繳交必須使用 Dropbox File Request", async () => {
   assert.match(validateContentData(data).join("\n"), /Dropbox File Request URL/);
 });
 
+test("作業分組表網址必須使用 HTTPS", async () => {
+  const data = clone(await loadContent());
+  data.assignments.items[0].group_form.url = "http://tinyurl.com/22vofa2n";
+  assert.match(validateContentData(data).join("\n"), /必須使用 HTTPS/);
+});
+
 test("作業日期時間必須明確包含時區", async () => {
   const data = clone(await loadContent());
   data.assignments.items[0].deadline = "2026-12-08T15:03:00";

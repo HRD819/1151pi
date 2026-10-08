@@ -95,6 +95,42 @@ function validateFileRequestUrl(value, location, errors) {
   }
 }
 
+function validateAssignmentGuidance(item, location, errors) {
+  if (item.group_form !== undefined) {
+    const formLocation = `${location}.group_form`;
+    requireObject(item.group_form, formLocation, errors);
+    if (isObject(item.group_form)) {
+      parseHttpsUrl(item.group_form.url, `${formLocation}.url`, errors);
+      requireString(item.group_form.label, `${formLocation}.label`, errors);
+    }
+  }
+
+  if (item.guidance !== undefined) {
+    requireArray(item.guidance, `${location}.guidance`, errors);
+    if (Array.isArray(item.guidance)) {
+      item.guidance.forEach((section, sectionIndex) => {
+        const sectionLocation = `${location}.guidance[${sectionIndex}]`;
+        requireObject(section, sectionLocation, errors);
+        if (!isObject(section)) return;
+        requireString(section.title, `${sectionLocation}.title`, errors);
+        requireArray(section.items, `${sectionLocation}.items`, errors);
+        if (Array.isArray(section.items)) {
+          if (section.items.length === 0) errors.push(`${sectionLocation}.items 不可為空。`);
+          section.items.forEach((entry, entryIndex) => requireString(entry, `${sectionLocation}.items[${entryIndex}]`, errors));
+        }
+      });
+    }
+  }
+
+  if (item.qa !== undefined) {
+    requireArray(item.qa, `${location}.qa`, errors);
+    if (Array.isArray(item.qa)) {
+      if (item.qa.length === 0) errors.push(`${location}.qa 不可為空。`);
+      item.qa.forEach((entry, entryIndex) => requireString(entry, `${location}.qa[${entryIndex}]`, errors));
+    }
+  }
+}
+
 function rejectPlannedUrls(item, location, errors) {
   if (item.status !== "planned") return;
   for (const key of ["url", "download_url", "submission_url", "href"]) {
@@ -217,6 +253,7 @@ function validateAssignments(data, errors) {
       validateFileRequestUrl(item.submission_url, `${location}.submission_url`, errors);
       requireString(item.upload_label, `${location}.upload_label`, errors);
     }
+    validateAssignmentGuidance(item, location, errors);
     validateResources(item.resources, `${location}.resources`, errors);
     if (ids.has(item.id)) errors.push(`${location}.id 不可重複。`);
     ids.add(item.id);

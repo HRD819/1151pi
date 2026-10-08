@@ -163,6 +163,26 @@ function assignmentResources(resources = []) {
     </div>`).join("")}</div>`;
 }
 
+function assignmentGuidance(item) {
+  const groupForm = item.group_form
+    ? `<p><a class="text-link" href="${escapeHtml(item.group_form.url)}">${escapeHtml(item.group_form.label)}</a></p>`
+    : "";
+  const sections = item.guidance?.map((section) => `
+    <section class="assignment-guidance-section">
+      <h3>${escapeHtml(section.title)}</h3>
+      <ol class="course-list">${section.items.map((entry) => `<li>${escapeHtml(entry)}</li>`).join("")}</ol>
+    </section>`).join("") ?? "";
+  const qa = item.qa?.length
+    ? `<section class="assignment-guidance-section">
+      <h3>常見 QA</h3>
+      <ol class="course-list">${item.qa.map((entry) => `<li>${escapeHtml(entry)}</li>`).join("")}</ol>
+    </section>`
+    : "";
+
+  if (!groupForm && !sections && !qa) return "";
+  return `<div class="nested-panel assignment-guidance">${groupForm}${sections}${qa}</div>`;
+}
+
 export function renderAssignments(data) {
   const cards = data.assignments.items.map((item, index) => `
       <article class="card assignment-card" id="${escapeHtml(item.id)}">
@@ -173,6 +193,7 @@ export function renderAssignments(data) {
         <h2>${escapeHtml(item.title)}</h2>
         ${item.mode ? `<p class="assignment-mode">形式：${escapeHtml(item.mode)}</p>` : ""}
         ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
+        ${assignmentGuidance(item)}
         ${item.submission_formats?.length ? `<div class="formats"><h3>應繳格式</h3><ul>${item.submission_formats.map((format) => `<li>${escapeHtml(format)}</li>`).join("")}</ul></div>` : `<p class="pending-note">應繳格式待教師確認。</p>`}
         ${assignmentResources(item.resources)}
         ${item.submission_url ? `<p><a class="button" href="${escapeHtml(item.submission_url)}">${escapeHtml(item.upload_label)}</a></p>` : `<p class="pending-note">${escapeHtml(item.note)}</p>`}
