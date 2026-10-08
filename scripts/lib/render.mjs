@@ -194,7 +194,7 @@ export function renderAssignments(data) {
         ${item.mode ? `<p class="assignment-mode">形式：${escapeHtml(item.mode)}</p>` : ""}
         ${item.description ? `<p>${escapeHtml(item.description)}</p>` : ""}
         ${assignmentGuidance(item)}
-        ${item.submission_formats?.length ? `<div class="formats"><h3>應繳格式</h3><ul>${item.submission_formats.map((format) => `<li>${escapeHtml(format)}</li>`).join("")}</ul></div>` : `<p class="pending-note">應繳格式待教師確認。</p>`}
+        ${item.submission_formats?.length ? `<div class="formats"><h3>應繳格式</h3><ul>${item.submission_formats.map((format) => `<li>${escapeHtml(format)}</li>`).join("")}</ul></div>` : ""}
         ${assignmentResources(item.resources)}
         ${item.submission_url ? `<p><a class="button" href="${escapeHtml(item.submission_url)}">${escapeHtml(item.upload_label)}</a></p>` : `<p class="pending-note">${escapeHtml(item.note)}</p>`}
       </article>`).join("");

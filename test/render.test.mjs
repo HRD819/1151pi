@@ -59,6 +59,7 @@ test("期中報告卡片完整呈現分組與報告說明", () => {
   ]) {
     assert.match(card, new RegExp(text));
   }
+  assert.doesNotMatch(card, /應繳格式待教師確認/);
 });
 
 test("期末報告範例位於期末報告卡片內", () => {
