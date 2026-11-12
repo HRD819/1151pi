@@ -49,9 +49,29 @@
       "title": "期末報告構想 PPT",
       "status": "open",
       "submission_formats": [
-        "PPT 或 PPTX（待教師確認）"
+        "PPT"
       ],
-      "note": "作業說明待提供。",
+      "description": "期末報告可選擇個人完成或組隊進行；每組最多 3 人。",
+      "guidance_links": [
+        {
+          "url": "https://is.gd/nUvqm6",
+          "label": "閱讀期末報告說明"
+        },
+        {
+          "url": "https://is.gd/2ZY6v1",
+          "label": "填寫期末報告分組名單表單"
+        }
+      ],
+      "guidance": [
+        {
+          "title": "時程安排",
+          "items": [
+            "2026 年 11 月 26 日上課前，請確定分組名單並思考想報告的主題。請避免選到其他組已選的主題，但仍可修改自己想要的主題。",
+            "2026 年 12 月 3 日報告構想，內容包含題目、技術領域概述、檢索資料來源或資料庫、檢索句及檢索筆數。僅需製作 PPT，需上傳並印出紙本，於報告前交給老師。一組上傳一份即可；報告時間請控制在 5 分鐘內。",
+            "2026 年 12 月 24 日或 2026 年 12 月 31 日進行分組口頭期末報告。口頭報告視同期末考，所有同學都應出席。"
+          ]
+        }
+      ],
       "submission_url": "https://www.dropbox.com/request/x53x1jd4w5s5fgl7p0cz",
       "upload_label": "上傳期末報告構想 PPT"
     },

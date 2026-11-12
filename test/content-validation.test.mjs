@@ -41,6 +41,12 @@ test("作業分組表網址必須使用 HTTPS", async () => {
   assert.match(validateContentData(data).join("\n"), /必須使用 HTTPS/);
 });
 
+test("作業說明連結必須使用 HTTPS", async () => {
+  const data = clone(await loadContent());
+  data.assignments.items[1].guidance_links[0].url = "http://is.gd/nUvqm6";
+  assert.match(validateContentData(data).join("\n"), /必須使用 HTTPS/);
+});
+
 test("作業日期時間必須明確包含時區", async () => {
   const data = clone(await loadContent());
   data.assignments.items[0].deadline = "2026-12-08T15:03:00";

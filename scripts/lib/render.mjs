@@ -164,9 +164,11 @@ function assignmentResources(resources = []) {
 }
 
 function assignmentGuidance(item) {
-  const groupForm = item.group_form
-    ? `<p><a class="text-link" href="${escapeHtml(item.group_form.url)}">${escapeHtml(item.group_form.label)}</a></p>`
-    : "";
+  const links = [
+    ...(item.guidance_links ?? []),
+    ...(item.group_form ? [item.group_form] : [])
+  ];
+  const linkMarkup = links.map((link) => `<p><a class="text-link" href="${escapeHtml(link.url)}">${escapeHtml(link.label)}</a></p>`).join("");
   const sections = item.guidance?.map((section) => `
     <section class="assignment-guidance-section">
       <h3>${escapeHtml(section.title)}</h3>
@@ -179,8 +181,8 @@ function assignmentGuidance(item) {
     </section>`
     : "";
 
-  if (!groupForm && !sections && !qa) return "";
-  return `<div class="nested-panel assignment-guidance">${groupForm}${sections}${qa}</div>`;
+  if (!linkMarkup && !sections && !qa) return "";
+  return `<div class="nested-panel assignment-guidance">${linkMarkup}${sections}${qa}</div>`;
 }
 
 export function renderAssignments(data) {

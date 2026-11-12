@@ -62,6 +62,27 @@ test("期中報告卡片完整呈現分組與報告說明", () => {
   assert.doesNotMatch(card, /應繳格式待教師確認/);
 });
 
+test("期末報告構想卡片呈現說明、分組與報告時程", () => {
+  const start = pages.assignments.indexOf('id="final-proposal-ppt"');
+  const end = pages.assignments.indexOf("</article>", start);
+  const card = pages.assignments.slice(start, end);
+  for (const text of [
+    'href="https://is.gd/nUvqm6"',
+    'href="https://is.gd/2ZY6v1"',
+    "閱讀期末報告說明",
+    "填寫期末報告分組名單表單",
+    "期末報告可選擇個人完成或組隊進行；每組最多 3 人。",
+    "2026 年 11 月 26 日上課前",
+    "2026 年 12 月 3 日報告構想",
+    "2026 年 12 月 24 日或 2026 年 12 月 31 日進行分組口頭期末報告",
+    "報告時間請控制在 5 分鐘內。"
+  ]) {
+    assert.match(card, new RegExp(text));
+  }
+  assert.match(card, /<li>PPT<\/li>/);
+  assert.doesNotMatch(card, /待教師確認/);
+});
+
 test("期末報告範例位於期末報告卡片內", () => {
   const reportStart = pages.assignments.indexOf('id="final-report"');
   const reportEnd = pages.assignments.indexOf("</article>", reportStart);

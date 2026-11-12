@@ -96,6 +96,19 @@ function validateFileRequestUrl(value, location, errors) {
 }
 
 function validateAssignmentGuidance(item, location, errors) {
+  if (item.guidance_links !== undefined) {
+    requireArray(item.guidance_links, `${location}.guidance_links`, errors);
+    if (Array.isArray(item.guidance_links)) {
+      item.guidance_links.forEach((link, linkIndex) => {
+        const linkLocation = `${location}.guidance_links[${linkIndex}]`;
+        requireObject(link, linkLocation, errors);
+        if (!isObject(link)) return;
+        parseHttpsUrl(link.url, `${linkLocation}.url`, errors);
+        requireString(link.label, `${linkLocation}.label`, errors);
+      });
+    }
+  }
+
   if (item.group_form !== undefined) {
     const formLocation = `${location}.group_form`;
     requireObject(item.group_form, formLocation, errors);
