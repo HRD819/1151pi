@@ -25,7 +25,7 @@
 - 不複製既有網站的兩門課資料。
 - 不把本網站內容加入既有網站首頁。
 
-可以沿用的工程經驗：零第三方相依 Node.js 靜態產生器、JSON schema 驗證、相對路徑、GitHub Pages project-site base path、`noindex`、skip link、清楚 focus、語意化 HTML、建置後檢查與人工觸發發布。
+可以沿用的工程經驗：零第三方相依 Node.js 靜態產生器、JSON schema 驗證、相對路徑、GitHub Pages project-site base path、`noindex`、skip link、清楚 focus、語意化 HTML、建置後檢查與自動發布。
 
 ## 3. 資訊架構
 
@@ -129,7 +129,8 @@ dist/                  # generated; never edit directly
 - 全部站內連結為相對路徑，支援 GitHub Pages project site。
 - `npm run ci` 應依序執行 validate、test、build、check。
 - GitHub Actions 在 pull request、`main` push 與人工觸發時執行品質檢查。
-- Push 預設只檢查、不部署；只有人工觸發，或日後教師明確設定 `PUBLISH_PAGES=true`，才部署 Pages。
+- 每次推送至 `main`，僅在品質檢查成功後自動部署 Pages；pull request 只做品質檢查。
+- 仍保留人工觸發：勾選 `publish` 可重新部署已驗證的版本；未勾選時只做品質檢查。
 - 初次上線前，必須由教師提供新的 repository 名稱並確認是否發布。
 
 ## 7. 可見性與隱私

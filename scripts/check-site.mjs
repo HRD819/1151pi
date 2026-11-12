@@ -113,7 +113,7 @@ for (const [foreground, background, label] of [
 
 const workflowPath = path.join(PROJECT_ROOT, ".github", "workflows", "deploy-pages.yml");
 const workflow = await readFile(workflowPath, "utf8");
-for (const requiredText of ["pull_request:", "workflow_dispatch:", "npm run ci", "actions/upload-pages-artifact@v3", "actions/deploy-pages@v4", "vars.PUBLISH_PAGES == 'true'", "path: dist"]) {
+for (const requiredText of ["pull_request:", "workflow_dispatch:", "npm run ci", "actions/upload-pages-artifact@v3", "actions/deploy-pages@v4", "github.event_name == 'push'", "(github.event_name == 'workflow_dispatch' && inputs.publish == true)", "path: dist"]) {
   if (!workflow.includes(requiredText)) errors.push(`GitHub Actions workflow 缺少：${requiredText}`);
 }
 

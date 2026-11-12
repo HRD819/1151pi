@@ -1,4 +1,4 @@
-name: Quality checks and optional Pages deployment
+name: Quality checks and Pages deployment
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       publish:
-        description: Publish the verified dist artifact to GitHub Pages
+        description: Deploy the verified artifact now (pushes to main deploy automatically)
         required: true
         default: false
         type: boolean
@@ -40,9 +40,8 @@ jobs:
   deploy:
     needs: quality
     if: >-
-      github.event_name != 'pull_request' &&
-      ((github.event_name == 'workflow_dispatch' && inputs.publish == true) ||
-      vars.PUBLISH_PAGES == 'true')
+      github.event_name == 'push' ||
+      (github.event_name == 'workflow_dispatch' && inputs.publish == true)
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
